@@ -33,6 +33,11 @@
 
 ## 1. Limpieza de datos 
 
+Tabla: superstore
+
+Visualización de nulos:
+
+![alt text](Imagenes/Nulos.png)
 
 
 Se normalizan los datos de la tabla amazon_review.
