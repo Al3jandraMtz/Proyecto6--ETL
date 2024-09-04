@@ -1,0 +1,55 @@
+Descripción de las variables que componen la tabla:
+
+category: Representan las categorías de productos vendidos en el hipermercado.
+
+city: Representa la ciudad donde se realizó el pedido.
+
+country: Representa el país en el que se encuentra el hipermercado.
+
+customer_id: Representa un identificador único para cada cliente.
+
+customer_name: Representa el nombre del cliente que realizó el pedido.
+
+discount: Representa el descuento aplicado al pedido.
+
+market: Representa el mercado o región donde opera el hipermercado.
+
+unknown: Una columna desconocida o no especificada.
+
+order_date: Representa la fecha en la que se realizó el pedido.
+
+order_id: Un identificador único para cada pedido.
+
+order_priority: Representa el nivel de prioridad del pedido.
+
+product_id: Representa un identificador único para cada producto.
+
+product_name: Representa el nombre del producto.
+
+profit: Representa el beneficio generado por el pedido.
+
+quantity: Representa la cantidad de productos pedidos.
+
+region: Representa la región donde se realizó el pedido.
+
+row_id: Representa un identificador único para cada fila del conjunto de datos.
+
+sales: Representa el monto total de venta del producto en el pedido.
+
+segment: Representa el segmento de clientes (por ejemplo, consumidores, empresas u oficinas en casa).
+
+ship_date: Representa la fecha en la que se envió el pedido.
+
+ship_mode: Representa el modo de envío utilizado para el pedido.
+
+shipping_cost: Representa el costo de envío del pedido.
+
+state: Representa el estado o región dentro del país.
+
+sub_category: Representa la subcategoría de productos dentro de la categoría principal.
+
+year: Representa el año en el que se realizó el pedido.
+
+market2: Otra columna relacionada con información de mercado.
+
+weeknum: Representa el número de la semana en la que se realizó el pedido.
