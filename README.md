@@ -60,19 +60,18 @@ Duplicados con variables coincidentes:
 
 >![alt text](Imagenes/Duplicados3.png)
 
+>>![alt text](Imagenes/Duplicados4.png)
+
 [Consulta BigQuery](SQL/Duplicados)
 
 
+**3. Outliers en variables categóricas y númericas** 
+
+Tabla: superstore
+
+Sin Outliers
 
 
-
-
-
-**3. Valores fuera del alcance** 
-
-Tabla: 
-
-Tabla: - 
 
 [Consulta BigQuery](SQL/FAlcance)
 
