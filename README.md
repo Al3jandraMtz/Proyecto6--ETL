@@ -39,6 +39,8 @@ Visualización de nulos:
 
 ![alt text](Imagenes/Nulos.png)
 
+[Consulta BigQuery](SQL/Nulos)
+
 
 Se normalizan los datos de la tabla amazon_review.
 
