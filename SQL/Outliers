@@ -1,0 +1,51 @@
+#Outliers en variables numericas
+-- Calcular el rango intercuartil (IQR) para identificar outliers
+WITH
+  stats AS (
+    SELECT
+      MIN(sales) AS min_sales,
+      APPROX_QUANTILES(sales, 4)[OFFSET(1)] AS q1_sales,
+      APPROX_QUANTILES(sales, 4)[OFFSET(2)] AS median_sales,
+      APPROX_QUANTILES(sales, 4)[OFFSET(3)] AS q3_sales,
+      MAX(sales) AS max_sales
+    FROM
+      `proyecto6-etl.Data_Set.superstore`
+  ),
+  iqr AS (
+    SELECT
+      q1_sales,
+      q3_sales,
+      q3_sales - q1_sales AS iqr_sales
+    FROM
+      stats
+  )
+SELECT
+  *,
+  IF(sales < q1_sales - 1.5 * iqr_sales OR sales > q3_sales + 1.5 * iqr_sales, TRUE, FALSE) AS is_outlier
+FROM
+  `proyecto6-etl.Data_Set.superstore`, iqr
+
+
+
+-- Identificar categorías raras en una columna categórica
+WITH
+  frequency AS (
+    SELECT
+      category,
+      COUNT(*) AS count,
+      SUM(COUNT(*)) OVER() AS total -- Total de registros 
+    FROM
+      `proyecto6-etl.Data_Set.superstore`
+    GROUP BY
+      category
+  )
+SELECT
+  category,
+  count,
+  (count / total) * 100 AS percentage
+FROM
+  frequency
+WHERE
+  count < 0.01 * total  -- Ajusta este umbral según lo que consideres raro
+
+
