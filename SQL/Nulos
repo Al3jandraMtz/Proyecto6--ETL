@@ -1,0 +1,278 @@
+--Visualización de nulos
+  -- Nulos
+SELECT
+  'category' AS column_name,
+  COUNT (*) AS null_count
+FROM
+  proyecto6-etl.Data_Set.superstore
+WHERE
+  category IS NULL
+
+UNION ALL
+------------------------
+SELECT
+  'city' AS column_name,
+  COUNT (*) AS null_count
+FROM
+  proyecto6-etl.Data_Set.superstore
+WHERE
+  city IS NULL
+
+UNION ALL
+------------------------
+SELECT
+  'country' AS column_name,
+  COUNT (*) AS null_count
+FROM
+  proyecto6-etl.Data_Set.superstore
+WHERE
+  country IS NULL
+
+UNION ALL
+
+------------------------
+SELECT
+  'customer_ID' AS column_name,
+  COUNT (*) AS null_count
+FROM
+  proyecto6-etl.Data_Set.superstore
+WHERE
+  customer_ID IS NULL
+
+UNION ALL
+
+------------------------
+SELECT
+  'customer_name' AS column_name,
+  COUNT (*) AS null_count
+FROM
+  proyecto6-etl.Data_Set.superstore
+WHERE
+  customer_name IS NULL
+
+UNION ALL
+
+------------------------
+SELECT
+  'discount' AS column_name,
+  COUNT (*) AS null_count
+FROM
+  proyecto6-etl.Data_Set.superstore
+WHERE
+  discount IS NULL
+
+UNION ALL
+
+------------------------
+SELECT
+  'market' AS column_name,
+  COUNT (*) AS null_count
+FROM
+  proyecto6-etl.Data_Set.superstore
+WHERE
+  market IS NULL
+UNION ALL
+
+------------------------
+SELECT
+  'unknown' AS column_name,
+  COUNT (*) AS null_count
+FROM
+  proyecto6-etl.Data_Set.superstore
+WHERE
+  unknown IS NULL
+  UNION ALL
+
+------------------------
+SELECT
+  'order_date' AS column_name,
+  COUNT (*) AS null_count
+FROM
+  proyecto6-etl.Data_Set.superstore
+WHERE
+  order_date IS NULL
+  UNION ALL
+
+------------------------
+SELECT
+  'order_id' AS column_name,
+  COUNT (*) AS null_count
+FROM
+  proyecto6-etl.Data_Set.superstore
+WHERE
+  order_id IS NULL
+  UNION ALL
+
+------------------------
+SELECT
+  'order_priority' AS column_name,
+  COUNT (*) AS null_count
+FROM
+  proyecto6-etl.Data_Set.superstore
+WHERE
+  order_priority IS NULL
+  UNION ALL
+
+------------------------
+SELECT
+  'product_id' AS column_name,
+  COUNT (*) AS null_count
+FROM
+  proyecto6-etl.Data_Set.superstore
+WHERE
+  product_id IS NULL
+
+ UNION ALL
+
+------------------------
+SELECT
+  'product_name' AS column_name,
+  COUNT (*) AS null_count
+FROM
+  proyecto6-etl.Data_Set.superstore
+WHERE
+  product_name IS NULL
+ UNION ALL
+
+------------------------
+SELECT
+  'profit' AS column_name,
+  COUNT (*) AS null_count
+FROM
+  proyecto6-etl.Data_Set.superstore
+WHERE
+  profit IS NULL
+ UNION ALL
+
+------------------------
+SELECT
+  'quantity' AS column_name,
+  COUNT (*) AS null_count
+FROM
+  proyecto6-etl.Data_Set.superstore
+WHERE
+  quantity IS NULL
+ UNION ALL
+
+------------------------
+SELECT
+  'region' AS column_name,
+  COUNT (*) AS null_count
+FROM
+  proyecto6-etl.Data_Set.superstore
+WHERE
+  region IS NULL
+ UNION ALL
+
+------------------------
+SELECT
+  'row_id' AS column_name,
+  COUNT (*) AS null_count
+FROM
+  proyecto6-etl.Data_Set.superstore
+WHERE
+  row_id IS NULL
+ UNION ALL
+
+------------------------
+SELECT
+  'sales' AS column_name,
+  COUNT (*) AS null_count
+FROM
+  proyecto6-etl.Data_Set.superstore
+WHERE
+  sales IS NULL
+ UNION ALL
+
+------------------------
+SELECT
+  'segment' AS column_name,
+  COUNT (*) AS null_count
+FROM
+  proyecto6-etl.Data_Set.superstore
+WHERE
+  segment IS NULL
+
+UNION ALL
+
+------------------------
+SELECT
+  'ship_date' AS column_name,
+  COUNT (*) AS null_count
+FROM
+  proyecto6-etl.Data_Set.superstore
+WHERE
+  ship_date IS NULL
+
+UNION ALL
+
+------------------------
+SELECT
+  'ship_mode' AS column_name,
+  COUNT (*) AS null_count
+FROM
+  proyecto6-etl.Data_Set.superstore
+WHERE
+  ship_mode IS NULL
+
+UNION ALL
+
+------------------------
+SELECT
+  'shipping_cost' AS column_name,
+  COUNT (*) AS null_count
+FROM
+  proyecto6-etl.Data_Set.superstore
+WHERE
+  shipping_cost IS NULL
+UNION ALL
+
+------------------------
+SELECT
+  'state' AS column_name,
+  COUNT (*) AS null_count
+FROM
+  proyecto6-etl.Data_Set.superstore
+WHERE
+  state IS NULL
+UNION ALL
+-----------------------------------------------------
+
+SELECT
+  'sub_category' AS column_name,
+  COUNT (*) AS null_count
+FROM
+  proyecto6-etl.Data_Set.superstore
+WHERE
+  sub_category IS NULL
+UNION ALL
+-----------------------------------------------------
+
+SELECT
+  'year' AS column_name,
+  COUNT (*) AS null_count
+FROM
+  proyecto6-etl.Data_Set.superstore
+WHERE
+  year IS NULL
+UNION ALL
+-----------------------------------------------------
+
+SELECT
+  'market2' AS column_name,
+  COUNT (*) AS null_count
+FROM
+  proyecto6-etl.Data_Set.superstore
+WHERE
+  market2 IS NULL
+
+UNION ALL
+-----------------------------------------------------
+
+SELECT
+  'weeknum' AS column_name,
+  COUNT (*) AS null_count
+FROM
+  proyecto6-etl.Data_Set.superstore
+WHERE
+  weeknum IS NULL

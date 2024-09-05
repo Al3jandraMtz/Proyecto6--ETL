@@ -37,10 +37,15 @@ Tabla: superstore
 
 Visualización de nulos:
 
-![alt text](Imagenes/Nulos.png)
+>![alt text](Imagenes/Nulos.png)
 
 [Consulta BigQuery](SQL/Nulos)
 
+Visualización de Duplicados:
+
+Se revisan los duplicados de manera general por columna, obteniendo los siguientes resultados:
+
+!>[alt text](image.png)
 
 Se normalizan los datos de la tabla amazon_review.
 
