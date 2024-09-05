@@ -35,53 +35,38 @@
 
 Tabla: superstore
 
-Visualización de nulos:
+**1. Nulos**
 
 >![alt text](Imagenes/Nulos.png)
 
 [Consulta BigQuery](SQL/Nulos)
 
-Visualización de Duplicados:
+**2. Duplicados**
 
 Se revisan los duplicados de manera general por columna, obteniendo los siguientes resultados:
 
-!>[alt text](image.png)
+!>[alt text](Imagenes/Duplicados1.png)
 
-Se normalizan los datos de la tabla amazon_review.
+Duplicados con sus multiples concurrencias:
 
-Se realiza exploracion de los dos data set proporcionados:
+>![alt text](Imagenes/Duplicados2.png)
 
-**1. Nulos**
+Duplicados con variables coincidentes:
 
-Tabla: 
+* Identificador de Pedido y Producto: Cada producto en un pedido debe tener una entrada única. Si un producto aparece más de una vez con el mismo order_id, podría ser un error o duplicado.
+* Pedido y Cliente: Cada pedido es único para un cliente y no debe repetirse con la misma combinación de order_id y customer_id, a menos que sea un error.
+* Pedido, Producto y Fecha: Verifica si el mismo producto fue pedido varias veces en la misma fecha bajo el mismo pedido, lo cual podría ser un duplicado no deseado.
+* Pedido Completo: (order_id, product_id, customer_id, order_date, quantity) Esta verificación asegura que no existan filas duplicadas que representen el mismo pedido, producto, cliente y cantidad en la misma fecha.
 
+>![alt text](Imagenes/Duplicados3.png)
 
-      Acciones: 
-
-Tabla: 
-
-
-
-        Acciones: 
-        
- 
- [Consulta BigQuery](SQL/nulls)
+[Consulta BigQuery](SQL/Duplicados)
 
 
-**2. Duplicados**
-
-Tabla:
 
 
-    Acciones:
-    
 
-Tabla: 
 
-    Acciones: 
-    
-
-[Consulta BigQuery](SQL/Duplicados_product)
 
 **3. Valores fuera del alcance** 
 
