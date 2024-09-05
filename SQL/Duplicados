@@ -535,7 +535,7 @@ ORDER BY column_name, occurrence_count DESC;
 -------------------
 -- Duplicados variables que coinciden
 
-#Orden y customer_id
+#Orden_id y customer_id
 SELECT
     order_id,
     customer_ID,
@@ -558,6 +558,38 @@ FROM
     `proyecto6-etl.Data_Set.superstore`
 GROUP BY
     order_id, product_id
+HAVING
+    COUNT(*) > 1
+ORDER BY
+    duplicate_count DESC;
+
+#Order_id, product_id y order_date
+SELECT
+    order_id,
+    product_ID,
+    order_date,
+    COUNT(*) AS duplicate_count
+FROM
+    `proyecto6-etl.Data_Set.superstore`
+GROUP BY
+    order_id, product_id, order_date
+HAVING
+    COUNT(*) > 1
+ORDER BY
+    duplicate_count DESC;
+
+#PEDIDO COMPLETO (Order_id, product_id, customer_id, order_date, quantity, 
+SELECT
+    order_id,
+    product_ID,
+    customer_ID,
+    order_date,
+    quantity,
+    COUNT(*) AS duplicate_count
+FROM
+    `proyecto6-etl.Data_Set.superstore`
+GROUP BY
+    order_id, product_id, customer_ID, order_date, quantity
 HAVING
     COUNT(*) > 1
 ORDER BY
