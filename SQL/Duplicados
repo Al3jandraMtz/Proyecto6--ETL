@@ -530,3 +530,35 @@ GROUP BY market2
 HAVING COUNT(*) > 1
 
 ORDER BY column_name, occurrence_count DESC;
+
+
+-------------------
+-- Duplicados variables que coinciden
+
+#Orden y customer_id
+SELECT
+    order_id,
+    customer_ID,
+    COUNT(*) AS duplicate_count
+FROM
+    `proyecto6-etl.Data_Set.superstore`
+GROUP BY
+    order_id, customer_ID
+HAVING
+    COUNT(*) > 1
+ORDER BY
+    duplicate_count DESC;
+
+#Order_id y product_id
+SELECT
+    order_id,
+    product_ID,
+    COUNT(*) AS duplicate_count
+FROM
+    `proyecto6-etl.Data_Set.superstore`
+GROUP BY
+    order_id, product_id
+HAVING
+    COUNT(*) > 1
+ORDER BY
+    duplicate_count DESC;
