@@ -73,6 +73,11 @@ No se detectarón Outliers en el Data frame, se normalizan los datos al utilizar
 
 **4.- Webscrapping**
 
+Se extrajo la tabla de "Multinacional" de la pagina web [Wikipedia](https://en.wikipedia.org/wiki/List_of_supermarket_chains) para incluir a los competidores en el estudio.
+
+**5.- Tablas de hecho y tablas de dimensiones**
+
+ddd
 
 
 [Consulta Colab](Colab/Proyecto4_Limpieza_Procesamiento.ipynb) 
