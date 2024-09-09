@@ -67,15 +67,12 @@ Duplicados con variables coincidentes:
 
 **3. Outliers en variables categóricas y númericas** 
 
-Tabla: superstore
+No se detectarón Outliers en el Data frame, se normalizan los datos al utilizar LOWER para convertir todos los valores "objects" en minúsculas.
 
-Sin Outliers
+[Consulta BigQuery](SQL/Outliers)
 
+**4.- Webscrapping**
 
-
-[Consulta BigQuery](SQL/FAlcance)
-
-4.- Normalización de datos
 
 
 [Consulta Colab](Colab/Proyecto4_Limpieza_Procesamiento.ipynb) 
