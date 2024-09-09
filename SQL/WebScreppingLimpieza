@@ -1,0 +1,10 @@
+SELECT 
+  string_field_0,
+  string_field_1,
+  string_field_2,
+  string_field_3,
+  REGEXP_REPLACE(REGEXP_EXTRACT(string_field_4, r'^[^ ]+'), r'[^A-Za-z0-9]', '') AS cleaned_string_field_4,
+  REGEXP_REPLACE(REGEXP_EXTRACT(string_field_5, r'^[^ ]+'), r'[^A-Za-z0-9]', '') AS cleaned_string_field_5
+FROM 
+  proyecto6-etl.Data_Set.multinacional
+ORDER BY string_field_0 ASC
