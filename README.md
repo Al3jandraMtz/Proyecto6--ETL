@@ -28,6 +28,7 @@
   2. Google Colab
   3. Tableu
   4. Visual Studio
+  5. LucidChart
 
 ## **Procesamiento**
 
@@ -45,7 +46,7 @@ Tabla: superstore
 
 Se revisan los duplicados de manera general por columna, obteniendo los siguientes resultados:
 
-!>[alt text](Imagenes/Duplicados1.png)
+>![alt text](Imagenes/Duplicados1.png)
 
 Duplicados con sus multiples concurrencias:
 
@@ -75,12 +76,18 @@ No se detectarón Outliers en el Data frame, se normalizan los datos al utilizar
 
 Se extrajo la tabla de "Multinacional" de la pagina web [Wikipedia](https://en.wikipedia.org/wiki/List_of_supermarket_chains) para incluir a los competidores en el estudio.
 
+Se realiza limpieza y normalización del data set.
+
+[Consulta Colab](Python/P6_ETL_Exploración.ipynb)
+
+[Consulta Bigquery](Python/P6_ETL_Exploración.ipynb)
+
 **5.- Tablas de hecho y tablas de dimensiones**
 
-ddd
+Diseño de la estructura de tablas:
 
+[LucidChart](https://lucid.app/lucidchart/2d233643-71af-4b4e-84eb-2e13a9e5aae1/edit?viewport_loc=-1948%2C-274%2C2409%2C1111%2C0_0&invitationId=inv_bc08195d-98b3-498f-9f3c-ea351374ea43) 
 
-[Consulta Colab](Colab/Proyecto4_Limpieza_Procesamiento.ipynb) 
 
 
 ## 2. Análisis exploratorio
