@@ -94,35 +94,42 @@ Diseño de la estructura de tablas:
 >![alt text](Imagenes/Diagrama.png)
 
 
-El proceso para el diseño de las tablas de dimensiones en este modelo siguió un enfoque sistemático para asegurar que las transacciones en la tabla de hechos puedan ser analizadas de manera detallada y eficiente, basándose en los atributos descriptivos proporcionados por las dimensiones. Este enfoque también garantiza la normalización de los datos y permite consultas analíticas eficientes.
+El proceso de diseño de las tablas de dimensiones en este modelo relacional siguió un enfoque estructurado para garantizar que las transacciones registradas en la tabla de hechos puedan ser analizadas de manera detallada y eficiente. Este enfoque se centró en la correcta segmentación de los atributos descriptivos y cuantitativos, asegurando una adecuada normalización de los datos, lo que facilita consultas analíticas eficientes y escalables.
 
 **1. Identificación de las Dimensiones Relevantes:**
 
 El primer paso consistió en identificar las entidades clave que describen los hechos (ventas, envíos, etc.). Estas entidades se agrupan en las siguientes dimensiones:
 
-  **- Dimensión Customer´s:** Esta dimensión almacena los atributos descriptivos de los clientes, lo que permitirá el análisis de las transacciones según las características de los clientes y sus ubicaciones.
+  **- Customer_dm:** Esta dimensión almacena los atributos descriptivos de los clientes, lo que permitirá el análisis de las transacciones según las características de los clientes.
 
+  **- Product_dm:** Contiene los detalles descriptivos de los productos vendidos, con la finalidad de analizar las ventas pot tipo de producto y categoría.
 
-  **- Dimensión de Product's:** Contiene los detalles descriptivos de los productos vendidos, con la finalidad de analizar las ventas pot tipo de producto y categoría.
+  **- Order_dm:** Describe las órdenes realizadas por los clientes y contiene métricas asociadas, con la finalidad de dar contexto sobre las métricas transaccionales.
 
-  **- Dimensión de Órders:** Describe las órdenes realizadas por los clientes y contiene métricas asociadas, con la finalidad de dar contexto sobre las métricas transaccionales.
+  **- Time_dm:** Proporciona contexto temporal para los hechos, desglosando las fechas en unidades útiles, para permitir el análisis de tendencias temporales, y el desglose por semana, mes, trimestre y años.
 
-  **- Dimensión time:** Proporciona contexto temporal para los hechos, desglosando las fechas en unidades útiles, para permitir el análisis de tendencias temporales, y el desglose por semana, mes, trimestre y años.
+  **- Shipping_dm:** Almacena información sobre los detalles del envío, con el proposito de analizar la eficiencia y los costos relacionados con el envío.
 
-  **- Dimensión Shipping:** Almacena información sobre los detalles del envío, con el proposito de analizar la eficiencia y los costos relacionados con el envío.
+  **- Market_dm:** Describe los mercados donde operan las venta, permite análisis de ventas por mercados y submercados
 
-  **- Dimensión Mkt:** Describe los mercados donde operan las venta, permite análisis de ventas por mercados y submercados
+  **- Competitor_dm:** Describe los diversas compañias y sus distintas localizaciones, aunque esta tabla no esta relacionada directamente con nuestra tabla de hechos, permitira realizar comparaciones o analisis de competidores.
 
 
 **2. Conexión con la Tabla de Hechos:**
 
-La tabla de hechos está relacionada con cada dimensión mediante claves foráneas. Por ejemplo:
+La tabla de hechos está relacionada con cada dimensión mediante claves primarias (PK) y claves foráneas (FK). Por ejemplo:
 
-* customer_ID conecta la tabla de hechos con la dimensión de clientes.
-* product_id conecta con la dimensión de productos.
-* order_id conecta con la dimensión de órdenes.
-* shipping_ID conecta con la dimensión de envíos.
-* market_id conecta con la dimensión de mercados.
+* order_id (PK) conecta con order_dm.
+* product_id (FK) conecta con la Product_dm.
+* customer_ID (FK) conecta la tabla de hechos con customer_dm.
+* order_date_formatted (FK) conecta con time_dm.
+* shipping_ID (FK) conecta con shipping_dm.
+* market_id (FK) conecta con market_dm.
+* sales: Monto total de la venta.
+* profit: Beneficio generado por el pedido.
+* discount: Descuento aplicado al pedido.
+* quantity: Cantidad de productos pedidos.
+* shipping_cost: Costo de envío.
 
 Estas relaciones permiten consultas multidimensionales donde se puede analizar, por ejemplo, las ventas totales por cliente, el impacto de los modos de envío en las ganancias, o las tendencias de ventas por mercados y categorías de productos.
 
