@@ -92,43 +92,45 @@ Diseño de la estructura de tablas:
 
 [Diseño](https://lucid.app/lucidchart/2d233643-71af-4b4e-84eb-2e13a9e5aae1/edit?viewport_loc=-1948%2C-274%2C2409%2C1111%2C0_0&invitationId=inv_bc08195d-98b3-498f-9f3c-ea351374ea43) 
 
-El diseño de la tabla de hechos y dimensiones fue realizado siguiendo los principios de modelado de datos relacional, orientado a optimizar el análisis de datos de transacciones comerciales, específicamente en el contexto de ventas y envíos.
+>![alt text](Imagenes/Diagrama.png)
 
-**1. Identificación de la Tabla de Hechos:**
-El primer paso fue identificar las métricas clave que se medirían. La tabla de hechos se diseñó para almacenar datos cuantitativos y transaccionales que reflejan las ventas realizadas. Entre los datos almacenados en esta tabla se incluyen:
 
-* order_id: Identificador único de cada transacción.
-* profit: Ganancia obtenida por transacción.
-* sales: Ventas totales de la transacción.
-* quantity: Cantidad de productos vendidos.
-* shipping_cost: Costo de envío asociado a la transacción.
-* discount: Descuento aplicado en la transacción.
-* row_id: Identificador de la fila dentro del conjunto de datos.
+El proceso para el diseño de las tablas de dimensiones en este modelo siguió un enfoque sistemático para asegurar que las transacciones en la tabla de hechos puedan ser analizadas de manera detallada y eficiente, basándose en los atributos descriptivos proporcionados por las dimensiones. Este enfoque también garantiza la normalización de los datos y permite consultas analíticas eficientes.
 
-Estos elementos cuantitativos reflejan los "hechos" que se analizan dentro del negocio, como el análisis de ventas, ganancias y costos.
+**1. Identificación de las Dimensiones Relevantes:**
 
-**2. Diseño de Tablas de Dimensiones:**
-El segundo paso consistió en identificar los elementos descriptivos (dimensiones) que darían contexto a los datos transaccionales en la tabla de hechos. Las dimensiones seleccionadas fueron:
+El primer paso consistió en identificar las entidades clave que describen los hechos (ventas, envíos, etc.). Estas entidades se agrupan en las siguientes dimensiones:
 
-* Dimensión Producto: Incluye variables como product_id, product_name, category, y sub_category, que describen el producto vendido en cada transacción.
+  **- Dimensión Customer´s:** Esta dimensión almacena los atributos descriptivos de los clientes, lo que permitirá el análisis de las transacciones según las características de los clientes y sus ubicaciones.
 
-*Dimensión Cliente: Incluye variables como customer_ID, customer_name, segment, city, state, region y country. Esta dimensión describe al cliente y su ubicación, lo que permite análisis segmentados de ventas por región o tipo de cliente.
 
-* Dimensión Fecha: Se incluyeron variables temporales como order_date, year, weeknum, order_month (mes de la compra) y order_semester (semestre en el que se realizó la compra). Estas variables temporales permiten el análisis por períodos (anual, mensual, semanal).
+  **- Dimensión de Product's:** Contiene los detalles descriptivos de los productos vendidos, con la finalidad de analizar las ventas pot tipo de producto y categoría.
 
-* Dimensión Envío: Variables como ship_date, ship_mode, y shipping_ID describen los detalles de envío relacionados con la transacción, lo que permite analizar el impacto de diferentes modos de envío y tiempos de entrega.
+  **- Dimensión de Órders:** Describe las órdenes realizadas por los clientes y contiene métricas asociadas, con la finalidad de dar contexto sobre las métricas transaccionales.
 
-* Dimensión Mercado: Se creó un market_id concatenando las variables market y market2 para facilitar el análisis por mercado, considerando distintas clasificaciones de mercado en función de las variables proporcionadas.
+  **- Dimensión time:** Proporciona contexto temporal para los hechos, desglosando las fechas en unidades útiles, para permitir el análisis de tendencias temporales, y el desglose por semana, mes, trimestre y años.
 
-**3. Ajustes y Limpieza de Datos:**
-Se ajustaron los formatos de las fechas (order_date y shipping_date) para facilitar su uso en análisis posteriores, extrayendo solo la parte de la fecha sin horas.
-Se añadieron nuevas variables calculadas, como el número de mes (order_month) y el semestre (order_semester), para ampliar las opciones de análisis temporal.
-Se creó un identificador único de envío (shipping_ID) que permite rastrear individualmente cada envío en base al número de orden, añadiendo un prefijo y formato estándar.
+  **- Dimensión Shipping:** Almacena información sobre los detalles del envío, con el proposito de analizar la eficiencia y los costos relacionados con el envío.
 
-**4. Relacionamiento y Optimización:**
-Cada tabla de dimensiones fue relacionada con la tabla de hechos a través de claves foráneas como product_id, customer_ID, y order_id. Esto asegura que los datos transaccionales puedan enriquecerse con las descripciones detalladas de productos, clientes, fechas y mercados, facilitando el análisis de ventas y operaciones.
+  **- Dimensión Mkt:** Describe los mercados donde operan las venta, permite análisis de ventas por mercados y submercados
 
-Las decisiones tomadas durante el diseño garantizan que la estructura sea eficiente para responder preguntas clave de negocio, como el análisis de rentabilidad por cliente, productos más vendidos por categoría, o la comparación de costos de envío entre modos de envío y regiones.
+
+**2. Conexión con la Tabla de Hechos:**
+
+La tabla de hechos está relacionada con cada dimensión mediante claves foráneas. Por ejemplo:
+
+* customer_ID conecta la tabla de hechos con la dimensión de clientes.
+* product_id conecta con la dimensión de productos.
+* order_id conecta con la dimensión de órdenes.
+* shipping_ID conecta con la dimensión de envíos.
+* market_id conecta con la dimensión de mercados.
+
+Estas relaciones permiten consultas multidimensionales donde se puede analizar, por ejemplo, las ventas totales por cliente, el impacto de los modos de envío en las ganancias, o las tendencias de ventas por mercados y categorías de productos.
+
+**3. Creación de Atributos Calculados en las Dimensiones:**
+
+Además de las relaciones entre las tablas, se calcularon atributos como el número de mes (order_month) y el semestre (order_semester) en la dimensión de fechas, para facilitar análisis temporales más detallados. Esto permite análisis estacionales, de trimestres y semestrales.
+
 
 
 
