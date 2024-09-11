@@ -8,10 +8,9 @@
 - [Herramientas](#herramientas)
 - [Procesamiento](#procesamiento)
   - [Limpieza de datos ](#limpieza_de_datos)
-  - [Análisis exploratorio](#análisis_exploratorio)
-  - [Hipótesis](#hipótesis)
-  - [Regresión Líneal](#regresion_lineal)
-  - [Regresión Logistica](#regresion_logistica)
+- [Webscrapping ](#webscrapping)
+- [Tablas de Hecho y de Dimensiones](#tablas_de_hecho_y_de_dimensiones)
+  
 - [Conclusiones](#Conclusiones)
 - [Recomendaciones](#Recomendaciones)
 - [Recursos](#Recursos)
@@ -32,7 +31,7 @@
 
 ## **Procesamiento**
 
-## 1. Limpieza de datos 
+### Limpieza de datos 
 
 Tabla: superstore
 
@@ -72,7 +71,7 @@ No se detectarón Outliers en el Data frame, se normalizan los datos al utilizar
 
 [Consulta BigQuery](SQL/Outliers)
 
-**4.- Webscrapping**
+## 2. Webscrapping 
 
 Se extrajo la tabla de "Multinacional" de la pagina web [Wikipedia](https://en.wikipedia.org/wiki/List_of_supermarket_chains) para incluir a los competidores en el estudio.
 
@@ -86,7 +85,7 @@ Se realiza limpieza y normalización del data set.
 
 [Consulta Bigquery](Python/P6_ETL_Exploración.ipynb)
 
-**5.- Tablas de hecho y tablas de dimensiones**
+## 3. Tablas de hecho y tablas de dimensiones
 
 Diseño de la estructura de tablas:
 
