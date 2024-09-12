@@ -138,7 +138,7 @@ Estas relaciones permiten consultas multidimensionales donde se puede analizar, 
 Además de las relaciones entre las tablas, se calcularon atributos como el número de mes (order_month) y el semestre (order_semester) en la dimensión de fechas, para facilitar análisis temporales más detallados. Esto permite análisis estacionales, de trimestres y semestrales.
 
 
-## Tabla de hechos y tabla de dimensiones
+## Pipeline
 
 
 ## 2. Análisis exploratorio
