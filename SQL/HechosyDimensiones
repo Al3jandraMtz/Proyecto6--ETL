@@ -1,0 +1,111 @@
+--Customer_dm
+
+CREATE OR REPLACE TABLE proyecto6-etl.dataset.customer_dm AS 
+SELECT
+  customer_id,
+  customer_name,
+  segment
+FROM `proyecto6-etl.dataset.superstore1`
+GROUP BY
+customer_id,
+customer_name,
+segment;
+
+--Order_dm
+
+CREATE OR REPLACE TABLE proyecto6-etl.dataset.order_dm AS 
+SELECT
+  order_id,
+  order_priority,
+  city,
+  state,
+  country,
+  region,
+  market,
+  market2
+FROM `proyecto6-etl.dataset.superstore1`
+GROUP BY
+order_id,
+  order_priority,
+  city,
+  state,
+  country,
+  region,
+  market,
+  market2
+
+  --Facts_table
+
+  CREATE OR REPLACE TABLE proyecto6-etl.dataset.fact_table AS 
+SELECT
+  order_id,
+  product_id,
+  customer_ID,
+  order_date1,
+  shipping_ID,
+  sales,
+  profit,
+  discount,
+  quantity,
+  shipping_cost
+FROM `proyecto6-etl.dataset.superstore1`
+GROUP BY
+    order_id,
+  product_id,
+  customer_ID,
+  order_date1,
+  shipping_ID,
+  sales,
+  profit,
+  discount,
+  quantity,
+  shipping_cost
+
+  --Shipping_dm
+
+  CREATE OR REPLACE TABLE proyecto6-etl.dataset.shipping_dm AS 
+SELECT
+shipping_ID,
+shipping_date1,
+ship_mode
+FROM `proyecto6-etl.dataset.superstore2`
+GROUP BY
+shipping_ID,
+shipping_date1,
+ship_mode
+
+--time_dm
+
+CREATE OR REPLACE TABLE proyecto6-etl.dataset.time_dm AS 
+SELECT
+  order_date1,
+  weeknum,
+  order_month,
+  order_semester,
+  year
+FROM `proyecto6-etl.dataset.superstore2`
+GROUP BY
+order_date1,
+  weeknum,
+  order_month,
+  order_semester,
+  year
+
+  --product_dm
+  CREATE OR REPLACE TABLE proyecto6-etl.dataset.product_dm AS 
+SELECT
+  product_id,
+  product_name,
+  category,
+  sub_category
+FROM `proyecto6-etl.dataset.superstore1`
+GROUP BY
+product_id,
+  product_name,
+  category,
+  sub_category
+
+
+  --Validación--
+
+  
