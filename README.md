@@ -137,7 +137,7 @@ Estas relaciones permiten consultas multidimensionales donde se puede analizar, 
 
 Además de las relaciones entre las tablas, se calcularon atributos como el número de mes (order_month) y el semestre (order_semester) en la dimensión de fechas, para facilitar análisis temporales más detallados. Esto permite análisis estacionales, de trimestres y semestrales.
 
-** 4. Validacion del modelo
+**4. Validacion del modelo**
 
 Una vez elaborado el diseño, se crean las estructuras de las tablas de hecho y las tablas de dimensiones previamente diseñadas.
 
@@ -155,6 +155,9 @@ Se realizaron varias consultas en BigQuery para validar que nuestro modelo funci
 
 >![alt text](Imagenes/Verificacion3.png
 
+* Facts_table - time_dm
+
+>![alt text](Imagenes/Verificacion4.png)
 
 
 
