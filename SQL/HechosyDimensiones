@@ -108,4 +108,52 @@ product_id,
 
   --Validación--
 
-  
+ --Order_dm
+ SELECT md.order_id, SUM(ft.sales) AS total_sales
+FROM `proyecto6-etl.dataset.fact_table` ft
+JOIN `proyecto6-etl.dataset.order_dm` md ON ft.order_id = md.order_id
+GROUP BY md.order_id;
+
+--Customer_dm
+SELECT 
+    ft.customer_id,
+    c.customer_name,
+    COUNT(*) AS total_orders
+FROM 
+    `proyecto6-etl.dataset.fact_table` ft
+JOIN 
+    `proyecto6-etl.dataset.customer_dm` c
+    ON ft.customer_id = c.customer_id
+GROUP BY 
+    ft.customer_id, c.customer_name;
+
+
+--Products_dm
+SELECT 
+    ft.product_id,
+    p.product_name,
+    SUM(ft.quantity) AS total_quantity_sold,
+    SUM(ft.sales) AS total_sales
+FROM 
+    `proyecto6-etl.dataset.fact_table` ft
+JOIN 
+    `proyecto6-etl.dataset.product_dm` p
+    ON ft.product_id = p.product_id
+GROUP BY 
+    ft.product_id, p.product_name;
+
+
+--time_dm
+SELECT 
+    ft.order_date1,
+    t.weeknum,
+    t.order_month,
+    t.order_semester,
+    COUNT(*) AS total_orders
+FROM 
+    `proyecto6-etl.dataset.fact_table` ft
+JOIN 
+    `proyecto6-etl.dataset.time_dm` t
+    ON ft.order_date1 = t.order_date1
+GROUP BY 
+    ft.order_date1, t.weeknum, t.order_month, t.order_semester;
