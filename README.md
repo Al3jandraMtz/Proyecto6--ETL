@@ -89,9 +89,9 @@ Se realiza limpieza y normalización del data set.
 
 Diseño de la estructura de tablas:
 
-[Diseño](https://lucid.app/lucidchart/2d233643-71af-4b4e-84eb-2e13a9e5aae1/edit?viewport_loc=-1948%2C-274%2C2409%2C1111%2C0_0&invitationId=inv_bc08195d-98b3-498f-9f3c-ea351374ea43) 
+[Diseño LucidChart](https://lucid.app/lucidchart/2d233643-71af-4b4e-84eb-2e13a9e5aae1/edit?viewport_loc=-1948%2C-274%2C2409%2C1111%2C0_0&invitationId=inv_bc08195d-98b3-498f-9f3c-ea351374ea43) 
 
->![alt text](Imagenes/Diagrama.png)
+>![alt text](![alt text](Imagenes/Diagrama.png)
 
 
 El proceso de diseño de las tablas de dimensiones en este modelo relacional siguió un enfoque estructurado para garantizar que las transacciones registradas en la tabla de hechos puedan ser analizadas de manera detallada y eficiente. Este enfoque se centró en la correcta segmentación de los atributos descriptivos y cuantitativos, asegurando una adecuada normalización de los datos, lo que facilita consultas analíticas eficientes y escalables.
@@ -119,7 +119,7 @@ El primer paso consistió en identificar las entidades clave que describen los h
 
 La tabla de hechos está relacionada con cada dimensión mediante claves primarias (PK) y claves foráneas (FK). Por ejemplo:
 
-* order_id (PK) conecta con order_dm.
+* unique_id (PK) conecta con order_dm.
 * product_id (FK) conecta con la Product_dm.
 * customer_ID (FK) conecta la tabla de hechos con customer_dm.
 * order_date_formatted (FK) conecta con time_dm.
@@ -136,6 +136,7 @@ Estas relaciones permiten consultas multidimensionales donde se puede analizar, 
 **3. Creación de Atributos Calculados en las Dimensiones:**
 
 Además de las relaciones entre las tablas, se calcularon atributos como el número de mes (order_month) y el semestre (order_semester) en la dimensión de fechas, para facilitar análisis temporales más detallados. Esto permite análisis estacionales, de trimestres y semestrales.
+Así como tambien Id´s únicos en order_id, market´s y shipping.
 
 **4. Validacion del modelo**
 
