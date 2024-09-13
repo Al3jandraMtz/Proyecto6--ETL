@@ -91,7 +91,8 @@ Diseño de la estructura de tablas:
 
 [Diseño LucidChart](https://lucid.app/lucidchart/2d233643-71af-4b4e-84eb-2e13a9e5aae1/edit?viewport_loc=-1948%2C-274%2C2409%2C1111%2C0_0&invitationId=inv_bc08195d-98b3-498f-9f3c-ea351374ea43) 
 
->![alt text](![alt text](Imagenes/Diagrama.png)
+Diagrama 
+>![alt text](Imagenes/Diagrama.png)
 
 
 El proceso de diseño de las tablas de dimensiones en este modelo relacional siguió un enfoque estructurado para garantizar que las transacciones registradas en la tabla de hechos puedan ser analizadas de manera detallada y eficiente. Este enfoque se centró en la correcta segmentación de los atributos descriptivos y cuantitativos, asegurando una adecuada normalización de los datos, lo que facilita consultas analíticas eficientes y escalables.
@@ -140,13 +141,17 @@ Así como tambien Id´s únicos en order_id, market´s y shipping.
 
 **4. Validacion del modelo**
 
-Una vez elaborado el diseño, se crean las estructuras de las tablas de hecho y las tablas de dimensiones previamente diseñadas.
+Se realizó proceso de validación del modelo de datos diseñado para el análisis de ventas, con el fin de garantizar la correcta segmentación y análisis de las transacciones registradas en la tabla de hechos (sales_fact). El modelo sigue un enfoque estructurado basado en la conexión con las dimensiones relevantes (clientes, productos, órdenes, tiempo, envíos y mercados), permitiendo un análisis detallado de las métricas clave de ventas, costos y beneficios.
 
-Se realizaron varias consultas en BigQuery para validar que nuestro modelo funcionara de manera adecuada:
+Descripción de la Validación
 
-* Facts_table - Order_ dm
+Para garantizar la integridad de las relaciones entre la tabla de hechos y las dimensiones, se ejecutaron diversas consultas para validar las siguientes relaciones clave:
 
->![alt text](Imagenes/Verificación1.png)
+* Sales_table - Order_ dm
+
+>![alt text](Imagenes/V1.png)
+
+- La relación entre la tabla de hechos y la dimensión de Órdenes se validó mediante una clave única que combina los identificadores de órdenes y clientes. Se examinaron atributos como la prioridad de la orden y la ubicación de la transacción para asegurar la correcta vinculación de la información. Se verificaron métricas clave como el número total de órdenes y las ventas totales para cada orden única, asegurando la precisión de las relaciones entre tablas. Además, se realizó un análisis por región y ciudad para identificar tendencias de ventas, destacando la capacidad del modelo para ofrecer insights geográficos precisos.
 
 * Facts_table - Customer_id
 
