@@ -189,6 +189,22 @@ El análisis temporal proporciona información valiosa sobre las tendencias de �
 
 **Facts_table - location_dm**
 
+>![alt text](Imagenes/V6.png)
+
+-Al realizar esta consulta, se asegura que cada market_id esté correctamente asociado con su país y estado correspondientes, así como con los mercados principales y secundarios, lo cual es esencial para contextualizar geográficamente las ventas. Además, se calculó el total de ventas por cada market_id, garantizando que las métricas estén correctamente agregadas a nivel de ubicación geográfica, facilitando así el análisis del rendimiento de las ventas por país, estado y mercado.
+
+**Facts_table**
+
+>![alt text](Imagenes/V7.png)
+
+Se llevó a cabo una validación de la tabla de hechos mediante el cálculo de métricas globales para asegurar la coherencia de los datos y la precisión en el procesamiento de transacciones. Las métricas clave validadas fueron:
+
+* Total de órdenes: 25,753, representando el número total de transacciones registradas.
+* Ventas totales: 12,642,905, reflejando el valor total de las ventas en el período analizado.
+* Beneficio total: 1,467,457.29, indicando las ganancias acumuladas después de deducir los costos.
+* Descuento promedio: 0.14, equivalente a un 14.3% de descuento promedio por transacción, evaluando su impacto en las ventas y beneficios.
+* Cantidad total de productos vendidos: 178,312, mostrando el volumen total de productos procesados y la demanda.
+
 
 ## Pipeline
 
