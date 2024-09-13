@@ -5,7 +5,7 @@ SELECT
   customer_id,
   customer_name,
   segment
-FROM `proyecto6-etl.dataset.superstore1`
+FROM `proyecto6-etl.dataset.superstore3`
 GROUP BY
 customer_id,
 customer_name,
@@ -15,60 +15,56 @@ segment;
 
 CREATE OR REPLACE TABLE proyecto6-etl.dataset.order_dm AS 
 SELECT
-  order_id,
+  unique_id,
   order_priority,
   city,
-  state,
-  country,
-  region,
-  market,
-  market2
-FROM `proyecto6-etl.dataset.superstore1`
+  region
+FROM `proyecto6-etl.dataset.superstore3`
 GROUP BY
-order_id,
+unique_id,
   order_priority,
   city,
-  state,
-  country,
-  region,
-  market,
-  market2
+  region
 
   --Facts_table
 
-  CREATE OR REPLACE TABLE proyecto6-etl.dataset.fact_table AS 
+CREATE OR REPLACE TABLE `proyecto6-etl.dataset.sales_fact` AS 
 SELECT
-  order_id,
+  unique_id,
   product_id,
-  customer_ID,
+  customer_id,
   order_date1,
-  shipping_ID,
+  shipping_id,
+  market_id,
   sales,
   profit,
   discount,
   quantity,
   shipping_cost
-FROM `proyecto6-etl.dataset.superstore1`
-GROUP BY
-    order_id,
+FROM 
+  `proyecto6-etl.dataset.superstore3`
+GROUP BY 
+   unique_id,
   product_id,
-  customer_ID,
+  customer_id,
   order_date1,
-  shipping_ID,
+  shipping_id,
+  market_id,
   sales,
   profit,
   discount,
   quantity,
   shipping_cost
+
 
   --Shipping_dm
 
-  CREATE OR REPLACE TABLE proyecto6-etl.dataset.shipping_dm AS 
+CREATE OR REPLACE TABLE proyecto6-etl.dataset.shipping_dm AS 
 SELECT
 shipping_ID,
 shipping_date1,
 ship_mode
-FROM `proyecto6-etl.dataset.superstore2`
+FROM `proyecto6-etl.dataset.superstore3`
 GROUP BY
 shipping_ID,
 shipping_date1,
@@ -83,7 +79,7 @@ SELECT
   order_month,
   order_semester,
   year
-FROM `proyecto6-etl.dataset.superstore2`
+FROM `proyecto6-etl.dataset.superstore3`
 GROUP BY
 order_date1,
   weeknum,
@@ -92,18 +88,35 @@ order_date1,
   year
 
   --product_dm
-  CREATE OR REPLACE TABLE proyecto6-etl.dataset.product_dm AS 
+CREATE OR REPLACE TABLE proyecto6-etl.dataset.product_dm AS 
 SELECT
   product_id,
   product_name,
   category,
   sub_category
-FROM `proyecto6-etl.dataset.superstore1`
+FROM `proyecto6-etl.dataset.superstore3`
 GROUP BY
 product_id,
   product_name,
   category,
   sub_category
+
+  --location_dm
+
+  CREATE OR REPLACE TABLE proyecto6-etl.dataset.location_dm AS 
+SELECT
+  market_id,
+  state,
+  country,
+  market,
+  market2
+FROM `proyecto6-etl.dataset.superstore3`
+GROUP BY
+ market_id,
+  state,
+  country,
+  market,
+  market2
 
 
   --Validación--
