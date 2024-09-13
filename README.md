@@ -155,7 +155,9 @@ Para garantizar la integridad de las relaciones entre la tabla de hechos y las d
 
 * Facts_table - Customer_id
 
->![alt text](Imagenes/Verificacion2.png
+>![alt text](Imagenes/V2.png)
+
+-Se llevó a cabo una consulta que enlaza la tabla de hechos con la dimensión de clientes para verificar la relación entre los customer_id presentes en ambas tablas. Se examinaron atributos clave como la relación entre customer_id y customer_name para asegurar que las transacciones se asignen correctamente a los clientes. Además, se validaron el número total de órdenes y el monto total de ventas por cliente, garantizando la precisión de los cálculos y la correcta vinculación con la información descriptiva de cada cliente.
 
 * Facts_table - Product_dm
 
