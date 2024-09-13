@@ -28,6 +28,7 @@
   3. Tableu
   4. Visual Studio
   5. LucidChart
+  6. MySQL
 
 ## **Procesamiento**
 
