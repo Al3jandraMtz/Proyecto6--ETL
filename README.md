@@ -205,11 +205,19 @@ Se llevó a cabo una validación de la tabla de hechos mediante el cálculo de m
 * Beneficio total: 1,467,457.29, indicando las ganancias acumuladas después de deducir los costos.
 * Descuento promedio: 0.14, equivalente a un 14.3% de descuento promedio por transacción, evaluando su impacto en las ventas y beneficios.
 * Cantidad total de productos vendidos: 178,312, mostrando el volumen total de productos procesados y la demanda.
-.
-
 
 ## Pipeline
 
+![alt text](image.png)
+
+Proceso ETL Pipeline:
+* Extracción: Recolecta los datos desde las fuentes, ya sea bases de datos, archivos CSV o web scraping.
+* Archivo CSV/Web Scraping: Procesa archivos CSV o extrae datos de la web para complementar los datos obtenidos.
+* Transform & Load: Los datos se transforman parcialmente y se cargan en un almacenamiento temporal o tabla staging.
+* Validar, Limpiar, Transformar: Los datos son validados (sin duplicados ni valores nulos), limpiados, y transformados para generar campos adicionales y asegurar la calidad.
+* Data Warehouse: Los datos transformados se almacenan en BigQuery, organizados en las tablas de hechos y dimensiones.
+* Transformar en el Data Warehouse: Transformaciones adicionales se aplican en BigQuery para preparar los datos finales para su consumo.
+* Data Analytics: Los datos se visualizan y analizan en herramientas de BI como Tableau para la toma de decisiones.
 
 ## 2. Análisis exploratorio
 
