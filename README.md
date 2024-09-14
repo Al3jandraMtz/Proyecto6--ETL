@@ -10,7 +10,7 @@
   - [Limpieza de datos ](#limpieza_de_datos)
 - [Webscrapping ](#webscrapping)
 - [Tablas de Hecho y de Dimensiones](#tablas_de_hecho_y_de_dimensiones)
-  
+- [Pipeline](#Pipeline)
 - [Conclusiones](#Conclusiones)
 - [Recomendaciones](#Recomendaciones)
 - [Recursos](#Recursos)
