@@ -196,7 +196,7 @@ El análisis temporal proporciona información valiosa sobre las tendencias de �
 
 **Facts_table**
 
->![alt text](Imagenes/image-1.png)
+![alt text](Imagenes/V7.png)
 
 Se llevó a cabo una validación de la tabla de hechos mediante el cálculo de métricas globales para asegurar la coherencia de los datos y la precisión en el procesamiento de transacciones. Las métricas clave validadas fueron:
 
@@ -221,7 +221,7 @@ Proceso ETL Pipeline:
 
 [Diseño LucidChart](https://lucid.app/lucidspark/03a4adc1-525f-452b-bf2e-8d1d5c15b3b0/edit?viewport_loc=550%2C2882%2C2976%2C1408%2C0_0&invitationId=inv_ace70aa1-ca5f-465a-bd7d-ac0b5b00fe96) 
 
-## 2. Análisis exploratorio
+## Análisis exploratorio
 
 
 
