@@ -1,0 +1,91 @@
+SELECT --DISTINCT
+  sf.unique_id,
+  sf.product_id,
+  sf.customer_id,
+  sf.order_date1,
+  sf.shipping_id,
+  sf.market_id,
+  sf.sales,
+  sf.profit,
+  sf.discount,
+  sf.quantity,
+  sf.shipping_cost,
+  b.order_priority,
+  b.city,
+  b.region,
+  c.customer_name,
+  c.segment,
+  d.product_name,
+  d.category,
+  d.sub_category,
+  e.state,
+  e.country,
+  e.market,
+  e.market2,
+  f.weeknum,
+  f.order_month,
+  f.order_semester,
+  f.year,
+  g.shipping_date1,
+  g.ship_mode
+FROM `proyecto6-etl.dataset.sales_fact` AS sf
+LEFT JOIN (
+  SELECT
+    unique_id,
+    order_priority,
+    city,
+    region,
+    ROW_NUMBER() OVER (PARTITION BY unique_id ORDER BY unique_id) AS rn
+  FROM `proyecto6-etl.dataset.order_dm`
+) AS b
+ON sf.unique_id = b.unique_id AND b.rn = 1  -- Filtra solo la primera aparición de cada unique_id
+LEFT JOIN (
+  SELECT
+    customer_id,
+    customer_name,
+    segment,
+    ROW_NUMBER() OVER (PARTITION BY customer_id ORDER BY customer_id) AS rn
+  FROM `proyecto6-etl.dataset.customer_dm`
+) AS c
+ON sf.customer_id = c.customer_id AND c.rn = 1  -- Filtra solo la primera aparición de cada customer_ID
+LEFT JOIN (
+  SELECT
+    product_id,
+    product_name,
+    category,
+    sub_category,
+    ROW_NUMBER() OVER (PARTITION BY product_id ORDER BY product_id) AS rn
+  FROM `proyecto6-etl.dataset.product_dm`
+) AS d
+ON sf.product_id = d.product_id AND d.rn = 1  -- Filtra solo la primera aparición de cada product_id
+LEFT JOIN (
+  SELECT
+    market_id,
+    state,
+    country,
+    market,
+    market2,
+    ROW_NUMBER() OVER (PARTITION BY market_id ORDER BY market_id) AS rn
+  FROM `proyecto6-etl.dataset.location_dm`
+) AS e
+ON sf.market_id = e.market_id AND e.rn = 1  -- Filtra solo la primera aparición de cada market_id
+LEFT JOIN (
+  SELECT
+    order_date1,
+    weeknum,
+    order_month,
+    order_semester,
+    year,
+    ROW_NUMBER() OVER (PARTITION BY order_date1 ORDER BY order_date1) AS rn
+  FROM `proyecto6-etl.dataset.time_dm`
+) AS f
+ON sf.order_date1 = f.order_date1 AND f.rn = 1  -- Filtra solo la primera aparición de cada order_date1
+LEFT JOIN (
+  SELECT
+    shipping_id, 
+    shipping_date1,
+    ship_mode,
+    ROW_NUMBER() OVER (PARTITION BY shipping_id ORDER BY shipping_id) AS rn
+  FROM `proyecto6-etl.dataset.shipping_dm`
+) AS g
+ON sf.shipping_id = g.shipping_id AND g.rn = 1;  -- Filtra solo la primera aparición de cada shipping_id
