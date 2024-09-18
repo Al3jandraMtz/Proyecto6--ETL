@@ -207,16 +207,15 @@ Se llevó a cabo una validación de la tabla de hechos mediante el cálculo de m
 
 ## Pipeline
 
-![alt text](image.png)
+>![alt text](Imagenes/Pipeline.png)
 
 Proceso ETL Pipeline:
 * Extracción: Recolecta los datos desde las fuentes, ya sea bases de datos, archivos CSV o web scraping.
-* Archivo CSV/Web Scraping: Procesa archivos CSV o extrae datos de la web para complementar los datos obtenidos.
-* Transform & Load: Los datos se transforman parcialmente y se cargan en un almacenamiento temporal o tabla staging.
-* Validar, Limpiar, Transformar: Los datos son validados (sin duplicados ni valores nulos), limpiados, y transformados para generar campos adicionales y asegurar la calidad.
+* Transform & Load: Los datos se transforman parcialmente y se cargan en un almacenamiento temporal o tabla staging. Los datos son validados (sin duplicados ni valores nulos), limpiados, y transformados para generar campos adicionales y asegurar la calidad.
 * Data Warehouse: Los datos transformados se almacenan en BigQuery, organizados en las tablas de hechos y dimensiones.
-* Transformar en el Data Warehouse: Transformaciones adicionales se aplican en BigQuery para preparar los datos finales para su consumo.
+Las transformaciones adicionales se aplican en BigQuery para preparar los datos finales para su consumo.
 * Data Analytics: Los datos se visualizan y analizan en herramientas de BI como Tableau para la toma de decisiones.
+* Programación: La carga de datos se realiza de manera diaria para el correcto análisis de los datos.
 
 [Diseño LucidChart](https://lucid.app/lucidspark/03a4adc1-525f-452b-bf2e-8d1d5c15b3b0/edit?viewport_loc=550%2C2882%2C2976%2C1408%2C0_0&invitationId=inv_ace70aa1-ca5f-465a-bd7d-ac0b5b00fe96) 
 
