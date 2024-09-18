@@ -221,44 +221,20 @@ Las transformaciones adicionales se aplican en BigQuery para preparar los datos 
 
 ## Análisis exploratorio
 
-El objetivo principal del análisis exploratorio fue obtener insights valiosos a partir de los datos de ventas y operaciones contenidos en las tablas de hechos y dimensiones. El análisis se centró en visualizar las relaciones entre diferentes variables categóricas y numéricas para identificar patrones, tendencias y anomalías. A continuación se describen los pasos clave seguidos en este proceso:
+El objetivo principal del análisis exploratorio fue obtener insights valiosos a partir de los datos de ventas y operaciones contenidos en las tablas de hechos y dimensiones. El análisis se centró en visualizar las relaciones entre diferentes variables categóricas y numéricas para identificar patrones, tendencias y anomalías.
+
+1. Análisis de Rotación de Productos:
+
+  * La categoría Office Supplies presenta una alta rotación, especialmente los productos como Binders y Storage Supplies, lo que sugiere que son esenciales para los consumidores. Esto puede indicar que existe una mayor demanda de artículos relacionados con la organización y el almacenamiento.
+  * En Technology, los productos Phones y Copiers tienen una demanda moderada, mientras que Machines tienen una rotación baja, lo cual podría significar que estos productos necesitan campañas de promoción más agresivas.
+
+  
+
+### **Dashboard**
 
 >![alt text](Imagenes/Dashboard.png)
 
-[Diseño Tableau](Tableau/Proyecto6-ETL.twbx) 
-
-
-
-### 1.- Hipótesis 
-
-### 2.- Hipótesis
-
-### 3. Hipótesis 
-
-### 4. Hipótesis 
-
-### 5. Hipótesis 
-
-### 6 . Hipótesis 
-
-[Consulta Python](Colab/P4_AnalisisExploratorio.ipynb).
-
-## Riesgo Relativo
-
- [Consulta Colab](Colab/P4_RiesgoRelativo.ipynb)
-
-## **Análisis de Significancia Estadística**
-
- [Consulta Colab](Colab/P4_Significancia.ipynb)
-
-## **Regresión líneal**
-
-
-  [Consulta Colab](Colab/P4_RegresionLineal.ipynb)
-
-## **Regresión logística**
-
-  [Consulta Colab](Colab/P4_RegresionLogistica.ipynb)
+[Dashboard Tableau](Tableau/Proyecto6-ETL.twbx) 
 
 ### **Conclusiones**
 
@@ -266,12 +242,6 @@ El objetivo principal del análisis exploratorio fue obtener insights valiosos a
 ### **Recomendaciones**
 
 
-
-## **Dashboard**
-
-Tableu 1era parte [aquí](https://public.tableau.com/app/profile/teresa.alejandra.martinez.vargas/viz/DataLab-amazon1/Dashboard1?publish=yes)
-
-Tableu 2da parte [aquí](https://public.tableau.com/app/profile/teresa.alejandra.martinez.vargas/viz/DataLab-amazon/Dashboard2?publish=yes)
 
 ## Presentación del Proyecto 
 Loom [aquí](https://www.loom.com/share/a60c807883a440969666e495dd5edefd?sid=874872a1-fdb7-49c8-86c0-182cfc36f778)
