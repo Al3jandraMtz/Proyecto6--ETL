@@ -7,7 +7,6 @@
 - [Introducción](#introducción)
 - [Herramientas](#herramientas)
 - [Procesamiento](#procesamiento)
-  - [Limpieza de datos ](#limpieza_de_datos)
 - [Webscrapping ](#webscrapping)
 - [Tablas de Hecho y de Dimensiones](#tablas_de_hecho_y_de_dimensiones)
 - [Pipeline](#Pipeline)
@@ -25,14 +24,14 @@
 ## **Herramientas**
   1. Google BigQuery
   2. Google Colab
-  3. Tableu
+  3. Tableau
   4. Visual Studio
   5. LucidChart
   6. MySQL
 
 ## **Procesamiento**
 
-### Limpieza de datos 
+
 
 Tabla: superstore
 
@@ -222,6 +221,10 @@ Proceso ETL Pipeline:
 [Diseño LucidChart](https://lucid.app/lucidspark/03a4adc1-525f-452b-bf2e-8d1d5c15b3b0/edit?viewport_loc=550%2C2882%2C2976%2C1408%2C0_0&invitationId=inv_ace70aa1-ca5f-465a-bd7d-ac0b5b00fe96) 
 
 ## Análisis exploratorio
+
+El objetivo principal del análisis exploratorio fue obtener insights valiosos a partir de los datos de ventas y operaciones contenidos en las tablas de hechos y dimensiones. El análisis se centró en visualizar las relaciones entre diferentes variables categóricas y numéricas para identificar patrones, tendencias y anomalías. A continuación se describen los pasos clave seguidos en este proceso:
+
+[Diseño LucidChart](https://lucid.app/lucidspark/03a4adc1-525f-452b-bf2e-8d1d5c15b3b0/edit?viewport_loc=550%2C2882%2C2976%2C1408%2C0_0&invitationId=inv_ace70aa1-ca5f-465a-bd7d-ac0b5b00fe96) 
 
 
 
