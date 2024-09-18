@@ -225,7 +225,7 @@ El objetivo principal del análisis exploratorio fue obtener insights valiosos a
 
 >![alt text](Imagenes/Dashboard.png)
 
-[Diseño Tableau](https://lucid.app/lucidspark/03a4adc1-525f-452b-bf2e-8d1d5c15b3b0/edit?viewport_loc=550%2C2882%2C2976%2C1408%2C0_0&invitationId=inv_ace70aa1-ca5f-465a-bd7d-ac0b5b00fe96) 
+[Diseño Tableau](Tableau/Proyecto6-ETL.twbx) 
 
 
 
