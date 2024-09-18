@@ -228,7 +228,7 @@ El objetivo principal del análisis exploratorio fue obtener insights valiosos a
   * La categoría Office Supplies presenta una alta rotación, especialmente los productos como Binders y Storage Supplies, lo que sugiere que son esenciales para los consumidores. Esto puede indicar que existe una mayor demanda de artículos relacionados con la organización y el almacenamiento.
   * En Technology, los productos Phones y Copiers tienen una demanda moderada, mientras que Machines tienen una rotación baja, lo cual podría significar que estos productos necesitan campañas de promoción más agresivas.
 
-  
+  >
 
 ### **Dashboard**
 
