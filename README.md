@@ -228,7 +228,21 @@ El objetivo principal del análisis exploratorio fue obtener insights valiosos a
   * La categoría Office Supplies presenta una alta rotación, especialmente los productos como Binders y Storage Supplies, lo que sugiere que son esenciales para los consumidores. Esto puede indicar que existe una mayor demanda de artículos relacionados con la organización y el almacenamiento.
   * En Technology, los productos Phones y Copiers tienen una demanda moderada, mientras que Machines tienen una rotación baja, lo cual podría significar que estos productos necesitan campañas de promoción más agresivas.
 
-  >
+  >![alt text](Imagenes/1.png)
+
+2. Ventas por Países:
+
+* Estados Unidos domina las ventas con una diferencia significativa en comparación con otros países. Australia, Francia y México son también mercados relevantes. Esto sugiere que sería importante enfocar estrategias de marketing en estos países.
+* Existe una oportunidad de expandir el negocio en mercados con menos ventas, como España y Turquía, que aún tienen un volumen bajo de ventas en comparación con otros países.
+
+ >![alt text](Imagenes/2.png)
+
+3. Estacionalidad de las Ventas:
+
+* Se observa un incremento en las ventas durante los últimos meses del año, probablemente debido a las festividades de fin de año. Este patrón de ventas estacionales podría aprovecharse con campañas promocionales antes de la temporada alta para maximizar las ventas.
+* El mes de noviembre tiene el pico más alto de ventas, lo que sugiere una alta efectividad de las estrategias de Black Friday o Cyber Monday.
+
+>![alt text](Imagenes/3.png)
 
 ### **Dashboard**
 
