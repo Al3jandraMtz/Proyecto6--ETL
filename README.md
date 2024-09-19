@@ -7,31 +7,31 @@
 - [Introducción](#introducción)
 - [Herramientas](#herramientas)
 - [Procesamiento](#procesamiento)
-- [Webscrapping ](#webscrapping)
-- [Tablas de Hecho y de Dimensiones](#tablas_de_hecho_y_de_dimensiones)
+- [WebScrapping ](#webscrapping)
+- [Tablas de Hecho y Dimensiones](#tablas_de_hecho_y_dimensiones)
 - [Pipeline](#Pipeline)
+- [Análisis Exploratorio](#análisis-exploratorio)
+- [Dashboard](#dashboard)
 - [Conclusiones](#Conclusiones)
 - [Recomendaciones](#Recomendaciones)
 - [Recursos](#Recursos)
 
 ## Introducción
-......
+Este proyecto tiene como finalidad realizar un análisis integral de los datos de ventas de una tienda minorista, empleando técnicas avanzadas de procesamiento y modelado de datos. Utilizando herramientas como Google BigQuery, Tableau y Python, se llevará a cabo un proceso ETL para construir un almacén de datos eficiente. El análisis exploratorio permitirá descubrir patrones en el comportamiento de los clientes, la rotación de productos, las tendencias de ventas por país, la estacionalidad y el impacto de los descuentos, proporcionando insights estratégicos para mejorar la rentabilidad y eficiencia operativa de la tienda.
 
 
 ### Objetivo
-
+El objetivo principal de este estudio es desarrollar y validar un modelo de datos que permita analizar de manera eficiente las ventas y operaciones de una tienda minorista, a través de la integración de datos en un pipeline ETL que estructure la información en tablas de hechos y dimensiones.
 
 ## **Herramientas**
   1. Google BigQuery
   2. Google Colab
   3. Tableau
-  4. Visual Studio
+  4. Visual Studio Code
   5. LucidChart
   6. MySQL
 
 ## **Procesamiento**
-
-
 
 Tabla: superstore
 
@@ -43,7 +43,7 @@ Tabla: superstore
 
 **2. Duplicados**
 
-Se revisan los duplicados de manera general por columna, obteniendo los siguientes resultados:
+Se revisaron los duplicados de manera general por columna, obteniendo los siguientes resultados:
 
 >![alt text](Imagenes/Duplicados1.png)
 
@@ -55,7 +55,7 @@ Duplicados con variables coincidentes:
 
 * Identificador de Pedido y Producto: Cada producto en un pedido debe tener una entrada única. Si un producto aparece más de una vez con el mismo order_id, podría ser un error o duplicado.
 * Pedido y Cliente: Cada pedido es único para un cliente y no debe repetirse con la misma combinación de order_id y customer_id, a menos que sea un error.
-* Pedido, Producto y Fecha: Verifica si el mismo producto fue pedido varias veces en la misma fecha bajo el mismo pedido, lo cual podría ser un duplicado no deseado.
+* Pedido, Producto y Fecha: Verificar si el mismo producto fue pedido varias veces en la misma fecha bajo el mismo pedido, lo cual podría ser un duplicado no deseado.
 * Pedido Completo: (order_id, product_id, customer_id, order_date, quantity) Esta verificación asegura que no existan filas duplicadas que representen el mismo pedido, producto, cliente y cantidad en la misma fecha.
 
 >![alt text](Imagenes/Duplicados3.png)
@@ -67,13 +67,13 @@ Duplicados con variables coincidentes:
 
 **3. Outliers en variables categóricas y númericas** 
 
-No se detectarón Outliers en el Data frame, se normalizan los datos al utilizar LOWER para convertir todos los valores "objects" en minúsculas.
+No se detectaron outliers en el DataFrame. Se normalizaron los datos utilizando LOWER para convertir todos los valores "object" a minúsculas.
 
 [Consulta BigQuery](SQL/Outliers)
 
 ## Webscrapping 
 
-Se extrajo la tabla de "Multinacional" de la pagina web [Wikipedia](https://en.wikipedia.org/wiki/List_of_supermarket_chains) para incluir a los competidores en el estudio.
+Se extrajo la tabla de "Multinacionales" de la pagina web [Wikipedia](https://en.wikipedia.org/wiki/List_of_supermarket_chains) para incluir a los competidores en el estudio.
 
 Se realiza limpieza y normalización del data set.
   * Eliminación de simbología.
@@ -101,19 +101,19 @@ El proceso de diseño de las tablas de dimensiones en este modelo relacional sig
 
 El primer paso consistió en identificar las entidades clave que describen los hechos (ventas, envíos, etc.). Estas entidades se agrupan en las siguientes dimensiones:
 
-  **- Customer_dm:** Esta dimensión almacena los atributos descriptivos de los clientes, lo que permitirá el análisis de las transacciones según las características de los clientes.
+  **- Customer_dm:** Almacena los atributos descriptivos de los clientes, permitiendo el análisis de las transacciones según las características de los clientes.
 
-  **- Product_dm:** Contiene los detalles descriptivos de los productos vendidos, con la finalidad de analizar las ventas pot tipo de producto y categoría.
+  **- Product_dm:** Contiene los detalles descriptivos de los productos vendidos, con la finalidad de analizar las ventas por tipo de producto y categoría.
 
-  **- Order_dm:** Describe las órdenes realizadas por los clientes y contiene métricas asociadas, con la finalidad de dar contexto sobre las métricas transaccionales.
+  **- Order_dm:** Describe las órdenes realizadas por los clientes y contiene métricas asociadas, proporcionando contexto sobre las métricas transaccionales.
 
-  **- Time_dm:** Proporciona contexto temporal para los hechos, desglosando las fechas en unidades útiles, para permitir el análisis de tendencias temporales, y el desglose por semana, mes, trimestre y años.
+  **- Time_dm:**  Proporciona contexto temporal para los hechos, desglosando las fechas en unidades útiles, permitiendo el análisis de tendencias temporales (por semana, mes, trimestre y año).
 
   **- Shipping_dm:** Almacena información sobre los detalles del envío, con el proposito de analizar la eficiencia y los costos relacionados con el envío.
 
-  **- Market_dm:** Describe los mercados donde operan las venta, permite análisis de ventas por mercados y submercados
+  **- Market_dm:** Describe los mercados donde operan las ventas, permitiendo análisis de ventas por mercados y submercados.
 
-  **- Competitor_dm:** Describe los diversas compañias y sus distintas localizaciones, aunque esta tabla no esta relacionada directamente con nuestra tabla de hechos, permitira realizar comparaciones o analisis de competidores.
+  **- Competitor_dm:** Describe diversas compañías y sus localizaciones. Aunque no está relacionada directamente con la tabla de hechos, permitirá realizar comparaciones o análisis de competidores.
 
 
 **2. Conexión con la Tabla de Hechos:**
@@ -132,12 +132,11 @@ La tabla de hechos está relacionada con cada dimensión mediante claves primari
 * quantity: Cantidad de productos pedidos.
 * shipping_cost: Costo de envío.
 
-Estas relaciones permiten consultas multidimensionales donde se puede analizar, por ejemplo, las ventas totales por cliente, el impacto de los modos de envío en las ganancias, o las tendencias de ventas por mercados y categorías de productos.
+Estas relaciones permiten consultas multidimensionales que facilitan análisis como las ventas totales por cliente, el impacto de los modos de envío en las ganancias o las tendencias de ventas por mercado y categoría.
 
 **3. Creación de Atributos Calculados en las Dimensiones:**
 
-Además de las relaciones entre las tablas, se calcularon atributos como el número de mes (order_month) y el semestre (order_semester) en la dimensión de fechas, para facilitar análisis temporales más detallados. Esto permite análisis estacionales, de trimestres y semestrales.
-Así como tambien Id´s únicos en order_id, market´s y shipping.
+Además de las relaciones entre las tablas, se calcularon atributos como el número de mes (order_month) y el semestre (order_semester) en la dimensión de fechas para facilitar análisis temporales detallados. También se generaron IDs únicos en order_id, market y shipping.
 
 **4. Validacion del modelo**
 
