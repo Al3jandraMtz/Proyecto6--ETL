@@ -308,14 +308,24 @@ El objetivo principal del análisis exploratorio fue obtener insights valiosos a
 El análisis exploratorio destaca oportunidades estratégicas para incrementar las ventas en diversas categorías y mercados. La identificación de patrones estacionales y la relevancia de descuentos moderados ofrece un marco para optimizar las estrategias comerciales. Mejorar los mercados de bajo rendimiento y las categorías de productos con baja rotación permitirá una mayor competitividad y maximización de beneficios.
 
 ### **Recomendaciones**
+**Descuentos:**
 * Optimizar descuentos entre el 5% y 10%, ya que se ha demostrado que generan el mayor impulso en ventas.
+* Ajustar los descuentos en productos que generen muchas ventas pero bajos beneficios, asegurando que estos sean rentables.
+
+**Marketing:**
 * Enfocar estrategias de marketing en los países con menor participación de ventas como Canadá, España y Turquía para aumentar la penetración en esos mercados.
 * Refinar las campañas de fin de año, que parecen ser los meses más lucrativos, especialmente noviembre, debido a eventos como Black Friday.
 * Incrementar las campañas de marketing para productos con baja rotación como Machines en la categoría de tecnología para aumentar su demanda.
-* Ajustar los descuentos en productos que generen muchas ventas pero bajos beneficios, asegurando que estos sean rentables.
 * Crear campañas de marketing y ofertas especiales enfocadas en el cuarto trimestre para aprovechar la tendencia de alto volumen de ventas.
+
+**Fidelización:**
 * Implementar programas de fidelización para pequeños clientes y programas de mantenimiento de relación con clientes grandes.
 
+**Eficiencia en Logística**
+* Analizar los costos y tiempos de envío, especialmente en los envíos más costosos como "First Class" y "Same Day". Se podría implementar un sistema que asigne automáticamente el método de envío más eficiente basado en la prioridad de la orden y el tipo de cliente.
+
+**Recursos financieros**
+* Revisar los productos con menor margen de beneficio (según el análisis de ventas y ganancias) y analizar si se justifica mantenerlos en el catálogo. Esto podría implicar revisar los costos de producción, reducir líneas de productos o renegociar con proveedores.
 
 
 ## Presentación del Proyecto 
