@@ -295,15 +295,9 @@ El objetivo principal del análisis exploratorio fue obtener insights valiosos a
 
 12. Distribución de Ventas:
 
-*La mayoría de las ventas se concentran en el rango bajo (0K a 2K en ventas), mientras que las ventas en los rangos más altos son menos frecuentes.
-
- La mayoría de las ventas provienen de pequeños pedidos. Los grandes pedidos son menos frecuentes pero contribuyen significativamente al volumen de ventas total.
+* La mayoría de las ventas se concentran en el rango bajo (0K a 2K en ventas), mientras que las ventas en los rangos más altos son menos frecuentes.
 
  >![alt text](Imagenes/12.png)
-
-
-
->![alt text](Imagenes/11.png)
 
 ### **Dashboard**
 
@@ -312,9 +306,16 @@ El objetivo principal del análisis exploratorio fue obtener insights valiosos a
 [Dashboard Tableau](Tableau/Proyecto6-ETL.twbx) 
 
 ### **Conclusiones**
-
+El análisis exploratorio destaca oportunidades estratégicas para incrementar las ventas en diversas categorías y mercados. La identificación de patrones estacionales y la relevancia de descuentos moderados ofrece un marco para optimizar las estrategias comerciales. Mejorar los mercados de bajo rendimiento y las categorías de productos con baja rotación permitirá una mayor competitividad y maximización de beneficios.
 
 ### **Recomendaciones**
+* Optimizar descuentos entre el 5% y 10%, ya que se ha demostrado que generan el mayor impulso en ventas.
+* Enfocar estrategias de marketing en los países con menor participación de ventas como Canadá, España y Turquía para aumentar la penetración en esos mercados.
+* Refinar las campañas de fin de año, que parecen ser los meses más lucrativos, especialmente noviembre, debido a eventos como Black Friday.
+* Incrementar las campañas de marketing para productos con baja rotación como Machines en la categoría de tecnología para aumentar su demanda.
+* Ajustar los descuentos en productos que generen muchas ventas pero bajos beneficios, asegurando que estos sean rentables.
+* Crear campañas de marketing y ofertas especiales enfocadas en el cuarto trimestre para aprovechar la tendencia de alto volumen de ventas.
+* Implementar programas de fidelización para pequeños clientes y programas de mantenimiento de relación con clientes grandes.
 
 
 
