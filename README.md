@@ -1,5 +1,7 @@
 # Proyecto6-ETL
 
+![_78c06404-39b3-4284-ba0e-4977edfd3950](https://github.com/user-attachments/assets/11e5b3ed-f854-4637-b1dd-b672ac1c44db)
+
 
 
 ### Temas
@@ -85,7 +87,7 @@ Se realiza limpieza y normalización del data set.
 
 [Consulta Bigquery](Python/P6_ETL_Exploración.ipynb)
 
-## Tablas de hecho y tablas de dimensiones
+## Tablas de hecho y Dimensiones
 
 Diseño de la estructura de tablas:
 
