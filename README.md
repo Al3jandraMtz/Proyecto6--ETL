@@ -244,6 +244,67 @@ El objetivo principal del análisis exploratorio fue obtener insights valiosos a
 
 >![alt text](Imagenes/3.png)
 
+4. Ventas por Market:
+
+* El mercado de APAC lidera con un volumen significativamente mayor de ventas que los demás. Este mercado parece estar bien desarrollado, mientras que en regiones como Canadá y North America hay menor actividad de ventas.
+* Aumentar la presencia en estos mercados más pequeños podría equilibrar la distribución global de ventas.
+
+>![alt text](Imagenes/4.png)
+
+5. Ventas VS Descuentos:
+
+* Se aprecia que los descuentos alrededor del 5% al 10% generan un gran impulso en las ventas, pero conforme los descuentos son mayores, el impacto en las ventas disminuye. Esto sugiere que un equilibrio en los descuentos puede ser más efectivo para las ventas.
+
+>![alt text](Imagenes/5.png)
+
+6. Prioridad de Orden y Número de Ventas:
+
+* La mayoría de las órdenes son de prioridad Medium, mientras que las de prioridad Critical y High generan menores volúmenes de ventas, aunque siguen siendo importantes. Es crucial optimizar los recursos y el inventario para órdenes de alta prioridad para cumplir con las expectativas del cliente.
+
+>![alt text](Imagenes/6.png)
+
+7. Clientes a través del Tiempo:
+
+* Los segmentos de clientes como Corporate y Consumer han crecido consistentemente en los últimos años, lo que indica un crecimiento estable del negocio. Sin embargo, el segmento Home Office muestra un crecimiento más lento, lo que podría ser un área de oportunidad para enfocarse con ofertas personalizadas.
+
+>![alt text](Imagenes/7.png)
+
+8. Relación entre Costo/Envío en Ventas:
+
+* Standard Class es el método de envío más utilizado, lo cual es común por sus bajos costos. Sin embargo, para los productos urgentes o de alta prioridad, el uso de envíos First Class y Same Day podría generar mayor satisfacción del cliente.
+
+>![alt text](Imagenes/8.png)
+
+9. Ventas vs. Profit:
+
+* Existe una correlación directa entre ventas y profit, donde las ventas más altas tienden a generar mayores beneficios, lo cual es esperado. Sin embargo, también se identifican puntos de baja rentabilidad que podrían indicar áreas para reducir costos o ajustar estrategias de precios.
+
+>![alt text](Imagenes/9.png)
+
+10. Análisis de Ventas por Trimestre:
+
+* El cuarto trimestre (T4) de cada año tiene un repunte visible, lo cual es un comportamiento típico de ventas estacionales. Esto podría estar relacionado con campañas de fin de año o promociones especiales.
+
+>![alt text](Imagenes/10.png)
+
+11.  Correlación entre Sales vs. Profit:
+
+* Existen productos que generan grandes ventas pero con márgenes de beneficio reducidos o incluso pérdidas. Este análisis podría ayudar a identificar productos de bajo rendimiento.
+
+>![alt text](Imagenes/11.png)
+
+12. Distribución de Ventas:
+
+*La mayoría de las ventas se concentran en el rango bajo (0K a 2K en ventas), mientras que las ventas en los rangos más altos son menos frecuentes.
+
+ La mayoría de las ventas provienen de pequeños pedidos. Los grandes pedidos son menos frecuentes pero contribuyen significativamente al volumen de ventas total.
+
+ >![alt text](Imagenes/12.png)
+
+
+
+>![alt text](Imagenes/11.png)
+
 ### **Dashboard**
 
 >![alt text](Imagenes/Dashboard.png)
