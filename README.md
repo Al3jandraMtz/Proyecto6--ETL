@@ -300,11 +300,13 @@ El objetivo principal del análisis exploratorio fue obtener insights valiosos a
 
  >![alt text](Imagenes/12.png)
 
+ [Tableau](Tableau/Proyecto6-ETL.twbx) 
+
 ### **Dashboard**
 
 >![alt text](Imagenes/Dashboard.png)
 
-[Dashboard Tableau](Tableau/Proyecto6-ETL.twbx) 
+[Dashboard Tableau](https://public.tableau.com/views/SuperStoreSales_17267968925110/viz_?:language=es-ES&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link) 
 
 ### **Conclusiones**
 El análisis exploratorio destaca oportunidades estratégicas para incrementar las ventas en diversas categorías y mercados. La identificación de patrones estacionales y la relevancia de descuentos moderados ofrece un marco para optimizar las estrategias comerciales. Mejorar los mercados de bajo rendimiento y las categorías de productos con baja rotación permitirá una mayor competitividad y maximización de beneficios.
