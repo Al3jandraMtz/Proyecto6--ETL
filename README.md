@@ -206,6 +206,8 @@ Se llevó a cabo una validación de la tabla de hechos mediante el cálculo de m
 * Descuento promedio: 0.14, equivalente a un 14.3% de descuento promedio por transacción, evaluando su impacto en las ventas y beneficios.
 * Cantidad total de productos vendidos: 178,312, mostrando el volumen total de productos procesados y la demanda.
 
+[Consulta BigQuery](SQL/HechosyDimensiones) 
+
 ## Pipeline
 
 >![alt text](Imagenes/Pipeline.png)
