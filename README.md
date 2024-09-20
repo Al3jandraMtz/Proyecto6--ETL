@@ -333,7 +333,7 @@ El análisis exploratorio destaca oportunidades estratégicas para incrementar l
 
 
 ## Presentación del Proyecto 
-Loom [aquí](https://www.loom.com/share/a60c807883a440969666e495dd5edefd?sid=874872a1-fdb7-49c8-86c0-182cfc36f778)
+Loom [aquí](https://www.loom.com/share/e5462b48ea194534bd61312f4c7948f9?sid=62d16ebb-2695-4ad0-ad7d-80a8cbacb852)
 
-PDF [aquí](https://drive.google.com/file/d/1CUbB37qTPLpsM2heo-EqDjsKOdm8zJJI/view?usp=sharing)
-....
+PDF [aquí](https://drive.google.com/file/d/1isDt3vMAsHyP3hzRfpuWlKlk2eTzwdDp/view?usp=drive_link)
+
